@@ -336,6 +336,12 @@ public class Main {
         // Grace au type objet, les variables non valorisées prendront par défaut une valeur nulle
 
 
+        //****************************************************
+        //     Les types ENUMS
+        //****************************************************
+
+
+
     }
 }
 

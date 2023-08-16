@@ -2,15 +2,27 @@ public class Voiture extends VehiculeAMoteur implements Videangable{
     private int nbPortes;
     private String couleur;
     private String modele;
-    private boolean boite;
+    public TypeBoiteVitesse boiteVitesse;
+    boolean boite;
     private int vitesse = 0;
+    int nbPlaces;
+
+
+//    static boolean auto = true;
+//    static boolean  manuel =false;
+
+
 
     public Voiture(){
-        System.out.println("ici on construit une voiture sans moteur");
+        this.nbPlaces = 5;
     }
     public Voiture(Moteur moteur){
 //        super(new Moteur()); // les deux sont valables
         super(moteur);  // les deux sont valables
+    }
+
+    public Voiture(int nbPlaces){  // constructeu pour nb Places
+        this.nbPlaces = nbPlaces;
     }
 
     public Voiture(Moteur mot, String modele ){
@@ -21,6 +33,20 @@ public class Voiture extends VehiculeAMoteur implements Videangable{
     public Voiture (String couleur, boolean boite){
 
     }
+
+    public void transporter(Passager passager, String villeDeDepart, String villeArrivee, String... villesEtapes){
+
+        System.out.println(passager.prenom + " voyage avec moi de "+villeDeDepart+" jusqu'à "+ villesEtapes[0]+" pour "+" mon trajet " + villeArrivee);
+        System.out.println("Nous passerons par : ");
+        for(int i=0; i<villesEtapes.length; i++ ){
+            System.out.println(villesEtapes[i]);
+        }
+    }
+
+//    methode pour les tableaux
+//    public void transporter(Passager passager, String villeDeDepart, String villeArrivee, String villesEtapes){
+//        System.out.println(passager.prenom + "voyage avec moi de "+villeDeDepart+" jusqu'à "+ villesEtapes[0]+" pour "+" mon trajet " + villeArrivee);
+//    }
 
     public void claxonner (){
         System.out.println("tut tut !");

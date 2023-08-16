@@ -7,12 +7,10 @@ public class Planete {
     private String nom;
     private static int nbPlanetesDecouvertes;
     private String matiere;   // Gazeuse | Tellurique
-    private long diametre;
+    private long diametre;  // kms
     private Atmosphere atmosphere;
 
-    public void setVaisseau(Vaisseau vaisseau) {
-        this.vaisseau = vaisseau;
-    }
+
 
     private Vaisseau vaisseau;
     boolean isAccost;
@@ -77,7 +75,9 @@ public class Planete {
     public void setAtmosphere(Atmosphere atmosphere) {
         this.atmosphere = atmosphere;
     }
-
+    public void setVaisseau(Vaisseau vaisseau) {
+        this.vaisseau = vaisseau;
+    }
 
 
 
