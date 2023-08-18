@@ -1,6 +1,8 @@
-package v6.v1;
+package v7.v1;
 
 public class Vaisseau {
+
+
 
     private String nom;
     private TypeVaisseau type;
@@ -41,6 +43,9 @@ public class Vaisseau {
         }
     }
 
+    public String getNom() {
+        return nom;
+    }
     public TypeVaisseau getType() {
         return type;
     }

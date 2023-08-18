@@ -3,15 +3,15 @@ package v6.v1;
 public class Main {
     public static void main(String[] args) {
 
-        PlaneteTellurique mars = new PlaneteTellurique("Mars");
-        PlaneteGazeuse jupiter = new PlaneteGazeuse("Jupiter");
-
-        VaisseauCivil monVMonde = new VaisseauCivil(TypeVaisseau.VAISSEAU_MONDE,30);
-
-        VaisseauDeGuerre monChasseur = new VaisseauDeGuerre(TypeVaisseau.CHASSEUR,10);
-
-        monVMonde.accoster(mars);
-        monChasseur.accoster(jupiter);
+//        PlaneteTellurique mars = new PlaneteTellurique("Mars"); ***partie 2
+//        PlaneteGazeuse jupiter = new PlaneteGazeuse("Jupiter");
+//
+//        VaisseauCivil monVMonde = new VaisseauCivil(TypeVaisseau.VAISSEAU_MONDE,30);
+//
+//        VaisseauDeGuerre monChasseur = new VaisseauDeGuerre(TypeVaisseau.CHASSEUR,10);
+//
+//        monVMonde.accoster(mars);
+//        monChasseur.accoster(jupiter);
 
 //        Vaisseau monVaisseau = new Vaisseau(); *********partie 1
 //        monVaisseau.type = TypeVaisseau.FREGATE;
