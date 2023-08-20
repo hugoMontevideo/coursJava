@@ -72,7 +72,7 @@ public class Main {
         //     Les types ELLIPSES
         //****************************************************
 
-        maVoiturePourRobotPeinture.transporter(moi, "aix", "montpellier","arles", "nimes", "lunel");
+        maVoiturePourRobotPeinture.transporter(moi, "aix", "montpellier","arles", "nimes", "lunel", "vendargues");
 
 
 

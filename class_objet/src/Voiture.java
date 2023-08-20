@@ -36,7 +36,7 @@ public class Voiture extends VehiculeAMoteur implements Videangable{
 
     public void transporter(Passager passager, String villeDeDepart, String villeArrivee, String... villesEtapes){
 
-        System.out.println(passager.prenom + " voyage avec moi de "+villeDeDepart+" jusqu'à "+ villesEtapes[0]+" pour "+" mon trajet " + villeArrivee);
+        System.out.println(passager.prenom + " voyage avec moi de "+villeDeDepart+" jusqu'à "+ villesEtapes[3]+" pour "+" mon trajet " + villeArrivee);
         System.out.println("Nous passerons par : ");
         for(int i=0; i<villesEtapes.length; i++ ){
             System.out.println(villesEtapes[i]);

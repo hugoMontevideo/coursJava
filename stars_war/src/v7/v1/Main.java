@@ -31,7 +31,7 @@ public class Main {
 
         System.out.print("Choississez votre planète de destination : ");
         String planetChoice = entree.next();
-        entree.close();
+
 
         if (planetChoice.equalsIgnoreCase("terre") == true
             || planetChoice.equalsIgnoreCase("mars") == true
@@ -43,9 +43,13 @@ public class Main {
             System.out.println("Faites un choix valable (Terre-Mars-Mercure-Venus) ");
         }
 
+        System.out.print("Combien de chargement desirez vous prendre ? ");
+        int availableLoadingOnDock = 40;
+        int loading = entree.nextInt();
 
+        System.out.printf("Votre chargement : %d T. \nReste à quai %d T", loading, availableLoadingOnDock - loading);
 
-
+        entree.close();
 
     }
 

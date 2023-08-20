@@ -12,7 +12,6 @@ public class Planete {
     protected Atmosphere atmosphere;
 
 
-
     public Planete(){
         nbPlanetesDecouvertes++;
     }
@@ -24,11 +23,6 @@ public class Planete {
     }
 
 
-    public Planete(String nom, List<Float> paramAtmosphere){
-        this();
-        this.nom = nom;
-
-    }
 
 
 

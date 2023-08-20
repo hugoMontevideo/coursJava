@@ -6,25 +6,27 @@ public class Vaisseau {
 
     private String nom;
     private TypeVaisseau type;
-
     private int nbPassagers;
-
     private int blindage;  // nombre sans unité
-
-    public void setResistanceDuBouclier(int resistanceDuBouclier) {
-        this.resistanceDuBouclier = resistanceDuBouclier;
-    }
-
     private int resistanceDuBouclier; // en minutes
+    int chargement;
 
-    public Vaisseau(){
-    }
+//    public Vaisseau(){
+//    }
     public Vaisseau(TypeVaisseau type){  // constructeur par type de vaisseau
+//        super();
         this.type=type;
     }
     public Vaisseau(TypeVaisseau type, int nbPassagers){
-        this.type = type;
+        this(type);
+//        this.type = type;
         this.nbPassagers=nbPassagers;
+    }
+    public Vaisseau(TypeVaisseau type, int nbPassagers, int chargement){
+        this(type,nbPassagers);
+//        this.type = type;
+//        this.nbPassagers=nbPassagers;
+        this.chargement = chargement;
     }
 
     public void activerBouclier(){
@@ -63,7 +65,9 @@ public class Vaisseau {
     public void setBlindage(int blindage) {
         this.blindage = blindage;
     }
-
+    public void setResistanceDuBouclier(int resistanceDuBouclier) {
+        this.resistanceDuBouclier = resistanceDuBouclier;
+    }
 
 
 }
