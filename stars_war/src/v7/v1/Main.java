@@ -13,43 +13,51 @@ public class Main {
 
         Vaisseau[] monParkVaisseau = { monChasseur, maFregate, monCroiseur, monCargo, monMonde};
 
-        Scanner entree = new Scanner(System.in);
+        PlaneteTellurique terre = new PlaneteTellurique( "terre", 3);
 
-        System.out.print("Choississez votre type de vaisseau : ");
-        int i = 1;
-        for (TypeVaisseau type : TypeVaisseau.values()) {
-            System.out.printf("%d - %s ; ", i, type.nomTypeVaisseau);
-            i++;
-        }
-        int choice = entree.nextInt();
+        terre.maBaie[0] = monCroiseur;
+        terre.maBaie[1] = monMonde;
+        terre.maBaie[2] = monCargo;
 
-        if (choice <= monParkVaisseau.length){
-            System.out.println("\n Votre choix = " + monParkVaisseau[choice-1].getType());
-        } else {
-            System.out.println("Faites un choix valable ");
-        }
+        monChasseur.demandeAccoster(terre);
 
-        System.out.print("Choississez votre planète de destination : ");
-        String planetChoice = entree.next();
+//        Scanner entree = new Scanner(System.in);
+//
+//        System.out.print("Choississez votre type de vaisseau : ");
+//        int i = 1;
+//        for (TypeVaisseau type : TypeVaisseau.values()) {
+//            System.out.printf("%d - %s ; ", i, type.nomTypeVaisseau);
+//            i++;
+//        }
+//        int choice = entree.nextInt();
+//
+//        if (choice <= monParkVaisseau.length){
+//            System.out.println("\n Votre choix = " + monParkVaisseau[choice-1].getType());
+//        } else {
+//            System.out.println("Faites un choix valable ");
+//        }
 
+//        System.out.print("Choississez votre planète de destination : ");
+//        String planetChoice = entree.next();
+//
+//
+//        if (planetChoice.equalsIgnoreCase("terre") == true
+//            || planetChoice.equalsIgnoreCase("mars") == true
+//            || planetChoice.equalsIgnoreCase("venus") == true
+//            || planetChoice.equalsIgnoreCase("mercure") == true
+//        ){
+//            System.out.printf("Votre destination : %s \n", planetChoice);
+//        } else {
+//            System.out.println("Faites un choix valable (Terre-Mars-Mercure-Venus) ");
+//        }
 
-        if (planetChoice.equalsIgnoreCase("terre") == true
-            || planetChoice.equalsIgnoreCase("mars") == true
-            || planetChoice.equalsIgnoreCase("venus") == true
-            || planetChoice.equalsIgnoreCase("mercure") == true
-        ){
-            System.out.printf("Votre destination : %s \n", planetChoice);
-        } else {
-            System.out.println("Faites un choix valable (Terre-Mars-Mercure-Venus) ");
-        }
-
-        System.out.print("Combien de chargement desirez vous prendre ? ");
-        int availableLoadingOnDock = 40;
-        int loading = entree.nextInt();
-
-        System.out.printf("Votre chargement : %d T. \nReste à quai %d T", loading, availableLoadingOnDock - loading);
-
-        entree.close();
+//        System.out.print("Combien de chargement desirez vous prendre ? ");
+//        int availableLoadingOnDock = 40;
+//        int loading = entree.nextInt();
+//
+//        System.out.printf("Votre chargement : %d T. \nReste à quai %d T", loading, availableLoadingOnDock - loading);
+//
+//        entree.close();
 
     }
 

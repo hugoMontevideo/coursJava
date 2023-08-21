@@ -29,6 +29,11 @@ public class Vaisseau {
         this.chargement = chargement;
     }
 
+    void demandeAccoster(PlaneteTellurique planete){
+        planete.restePlaceDisponible();
+        System.out.printf("Il reste des places pour accostage ? %b \n", planete.restePlaceDisponible());
+    }
+
     public void activerBouclier(){
         System.out.printf("Activation du bouclier d'un vaisseau de type %s\n",type );
     }

@@ -6,9 +6,25 @@ public class PlaneteTellurique extends Planete implements Habitable {
     protected Vaisseau vaisseau;
     protected boolean isAccost;
 
+    Vaisseau[] maBaie;
+
     PlaneteTellurique(String nom){
         super(nom);
     }
+    PlaneteTellurique(String nom, int nbPlaces){
+        this(nom);
+        this.maBaie = new Vaisseau[nbPlaces];
+    }
+
+    boolean restePlaceDisponible(){
+        for (Vaisseau obj: this.maBaie ) {
+            if (obj == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
      public void accueillirVaisseau( Vaisseau vaisseau ){
         if( this.vaisseau == null ){
             totalVisiteurs += vaisseau.getNbPassagers() ;
